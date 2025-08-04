@@ -62,6 +62,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					foreground: 'hsl(var(--gold-foreground))'
+				},
+				'burnt-orange': {
+					DEFAULT: 'hsl(var(--burnt-orange))',
+					foreground: 'hsl(var(--burnt-orange-foreground))'
+				},
 				orange: {
 					DEFAULT: 'hsl(var(--orange))',
 					foreground: 'hsl(var(--orange-foreground))'
@@ -73,10 +81,14 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-gold': 'var(--gradient-gold)',
+				'gradient-cinematic': 'var(--gradient-cinematic)',
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-mesh': 'var(--gradient-mesh)'
 			},
 			boxShadow: {
-				'glow': 'var(--shadow-glow)'
+				'glow': 'var(--shadow-glow)',
+				'premium': 'var(--shadow-premium)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)'
