@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,76 +10,64 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Cinematic Dark Theme */
-    --background: 210 11% 8%;
-    --foreground: 50 100% 98%;
+    /* TrendLoop Brand Colors - From Website Guidelines */
+    --background: 0 0% 100%;        /* White background */
+    --foreground: 0 0% 0%;          /* Black text #000000 */
 
-    --card: 215 15% 12%;
-    --card-foreground: 50 100% 98%;
+    --card: 0 0% 100%;              /* White cards */
+    --card-foreground: 0 0% 0%;     /* Black text on cards */
 
-    --popover: 215 15% 12%;
-    --popover-foreground: 50 100% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 43 96% 56%;
-    --primary-foreground: 210 11% 8%;
+    --primary: 28 100% 60%;         /* Orange #ff9933 */
+    --primary-foreground: 0 0% 0%;  /* Black text on orange */
 
-    --secondary: 20 90% 48%;
-    --secondary-foreground: 50 100% 98%;
+    --secondary: 0 0% 0%;           /* Black #000000 */
+    --secondary-foreground: 0 0% 100%; /* White text on black */
 
-    --muted: 215 15% 18%;
-    --muted-foreground: 50 20% 65%;
+    --muted: 0 0% 93%;              /* Light gray #ffffff */
+    --muted-foreground: 0 0% 20%;   /* Dark gray for muted text */
 
-    --accent: 43 96% 56%;
-    --accent-foreground: 210 11% 8%;
+    --accent: 28 100% 60%;          /* Orange accent */
+    --accent-foreground: 0 0% 0%;   /* Black text on accent */
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 50 100% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 215 15% 18%;
-    --input: 215 15% 18%;
-    --ring: 43 96% 56%;
+    --border: 0 0% 87%;             /* Light gray borders */
+    --input: 0 0% 87%;
+    --ring: 28 100% 60%;            /* Orange focus ring */
 
     --radius: 0.75rem;
     
-    /* TrendLoop Brand Colors */
-    --gold: 43 96% 56%;
-    --gold-foreground: 210 11% 8%;
-    --burnt-orange: 20 90% 48%;
-    --burnt-orange-foreground: 50 100% 98%;
+    /* TrendLoop Specific Brand Colors */
+    --orange: 28 100% 60%;          /* #ff9933 */
+    --orange-foreground: 0 0% 0%;   /* Black on orange */
+    --black: 0 0% 0%;               /* #000000 */
+    --black-foreground: 0 0% 100%;  /* White on black */
+    --white: 0 0% 100%;             /* #ffffff */
+    --white-foreground: 0 0% 0%;    /* Black on white */
+    --light-gray: 0 0% 93%;         /* #ffffff for light elements */
     
-    /* Legacy color mappings for compatibility */
-    --orange: 20 90% 48%;
-    --orange-foreground: 50 100% 98%;
-    --pink: 43 96% 56%;
-    --pink-foreground: 210 11% 8%;
-    
-    /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(43 96% 56%), hsl(49 89% 52%), hsl(20 90% 48%));
-    --gradient-gold: linear-gradient(135deg, hsl(43 96% 56%), hsl(49 89% 52%));
-    --gradient-cinematic: linear-gradient(135deg, hsl(210 11% 8%), hsl(215 15% 12%));
-    --gradient-subtle: var(--gradient-cinematic);
-    --gradient-mesh: radial-gradient(circle at 25% 25%, hsl(43 96% 56% / 0.2) 0%, transparent 50%);
+    /* Brand Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(28 100% 60%), hsl(0 0% 0%)); /* Orange to Black */
+    --gradient-orange: linear-gradient(135deg, hsl(28 100% 60%), hsl(28 100% 50%)); /* Orange variations */
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 97%)); /* White to light gray */
     
     /* Effects */
-    --shadow-glow: 0 0 40px hsl(43 96% 56% / 0.3);
-    --shadow-premium: 0 10px 30px -10px hsl(43 96% 56% / 0.2);
+    --shadow-glow: 0 0 40px hsl(28 100% 60% / 0.3); /* Orange glow */
+    --shadow-premium: 0 10px 30px -10px hsl(28 100% 60% / 0.2); /* Orange shadow */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 97%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 87%;
+    --sidebar-ring: 28 100% 60%;
   }
 
   .dark {
@@ -126,11 +116,18 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
+
+  /* Font Weight Classes */
+  .font-light { font-weight: 300; }
+  .font-normal { font-weight: 400; }
+  .font-medium { font-weight: 500; }
+  .font-semibold { font-weight: 600; }
+  .font-bold { font-weight: 700; }
 
   html {
     scroll-behavior: smooth;
@@ -219,8 +216,8 @@ All colors MUST be HSL.
   background-clip: text;
 }
 
-.text-gradient-gold {
-  background: var(--gradient-gold);
+.text-gradient-orange {
+  background: var(--gradient-orange);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
