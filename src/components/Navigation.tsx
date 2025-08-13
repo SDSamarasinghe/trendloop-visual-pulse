@@ -9,8 +9,7 @@ const Navigation = () => {
 
   const navItems = [
     { href: "#services", label: "Services" },
-    { href: "#portfolio", label: "Portfolio" },
-    { href: "#contact", label: "Contact" }
+    { href: "#portfolio", label: "Portfolio" }
   ];
 
   useEffect(() => {
@@ -55,7 +54,7 @@ const Navigation = () => {
               <motion.button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="relative text-white/90 hover:text-white transition-colors font-medium group"
+                className={`relative transition-colors font-medium group ${isScrolled ? 'text-black hover:text-orange' : 'text-white hover:text-orange'}`}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
@@ -63,7 +62,7 @@ const Navigation = () => {
               >
                 {item.label}
                 <motion.div
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300"
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange to-black group-hover:w-full transition-all duration-300"
                   whileHover={{ width: "100%" }}
                 />
               </motion.button>
@@ -74,7 +73,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-white/90 hover:text-white transition-colors"
+              className={`p-2 transition-colors ${isScrolled ? 'text-black hover:text-orange' : 'text-white hover:text-orange'}`}
               whileTap={{ scale: 0.95 }}
               aria-label="Toggle menu"
             >
@@ -120,7 +119,7 @@ const Navigation = () => {
                   <motion.button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-left text-white/90 hover:text-white transition-colors font-medium text-lg"
+                    className={`text-left transition-colors font-medium text-lg ${isScrolled ? 'text-black hover:text-orange' : 'text-white hover:text-orange'}`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
