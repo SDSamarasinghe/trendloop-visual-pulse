@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
-import Contact from "@/components/Contact";
+import ChatWidget from "@/components/ChatWidget";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -13,9 +13,9 @@ const Index = () => {
         <Hero />
         <Services />
         <Portfolio />
-        <Contact />
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 };
