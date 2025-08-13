@@ -39,7 +39,7 @@ const Hero = () => {
             }}
           >
             <span className="block text-gradient-brand">TRENDLOOP</span>
-            <span className="block text-gradient-gold mt-2">VISUAL PULSE</span>
+            <span className="block text-gradient-brand mt-2">VISUAL PULSE</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -54,7 +54,7 @@ const Hero = () => {
             }}
           >
             Transform Your Brand With 
-            <span className="text-gradient-gold font-medium"> Powerful Visuals</span>
+            <span className="text-gradient-brand font-medium"> Powerful Visuals</span>
           </motion.p>
 
           {/* Description */}
@@ -84,7 +84,7 @@ const Hero = () => {
           >
             <Button 
               size="lg" 
-              className="group bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-black font-semibold px-8 py-4 rounded-full btn-glow shadow-premium hover:shadow-glow transition-all duration-300"
+              className="group bg-gradient-to-r from-orange to-black hover:from-orange/90 hover:to-black/90 text-white font-semibold px-8 py-4 rounded-full btn-glow shadow-premium hover:shadow-glow transition-all duration-300"
             >
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -128,7 +128,7 @@ const Hero = () => {
                 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-gradient-gold mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-gradient-brand mb-2">
                   {stat.number}
                 </div>
                 <div className="text-white/70 text-sm md:text-base">
@@ -153,7 +153,7 @@ const Hero = () => {
       >
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center animate-bounce">
           <motion.div 
-            className="w-1 h-3 bg-gradient-to-b from-amber-400 to-orange-500 rounded-full mt-2"
+            className="w-1 h-3 bg-gradient-to-b from-orange to-black rounded-full mt-2"
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           />
@@ -165,7 +165,7 @@ const Hero = () => {
         {Array.from({ length: 6 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full opacity-60"
+            className="absolute w-2 h-2 bg-gradient-to-r from-orange to-black rounded-full opacity-60"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
