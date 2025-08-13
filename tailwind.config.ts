@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'sf-pro': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif'],
+				'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -62,29 +66,24 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				gold: {
-					DEFAULT: 'hsl(var(--gold))',
-					foreground: 'hsl(var(--gold-foreground))'
-				},
-				'burnt-orange': {
-					DEFAULT: 'hsl(var(--burnt-orange))',
-					foreground: 'hsl(var(--burnt-orange-foreground))'
-				},
+				// TrendLoop Brand Colors
 				orange: {
 					DEFAULT: 'hsl(var(--orange))',
 					foreground: 'hsl(var(--orange-foreground))'
 				},
-				pink: {
-					DEFAULT: 'hsl(var(--pink))',
-					foreground: 'hsl(var(--pink-foreground))'
-				}
+				black: {
+					DEFAULT: 'hsl(var(--black))',
+					foreground: 'hsl(var(--black-foreground))'
+				},
+				white: {
+					DEFAULT: 'hsl(var(--white))',
+					foreground: 'hsl(var(--white-foreground))'
+				},
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-gold': 'var(--gradient-gold)',
-				'gradient-cinematic': 'var(--gradient-cinematic)',
+				'gradient-orange': 'var(--gradient-orange)',
 				'gradient-subtle': 'var(--gradient-subtle)',
-				'gradient-mesh': 'var(--gradient-mesh)'
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
