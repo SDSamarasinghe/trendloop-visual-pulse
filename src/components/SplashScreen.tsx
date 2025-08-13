@@ -26,7 +26,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-black via-amber-900/20 to-black"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -34,7 +34,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-20">
-            <div className="h-full w-full bg-[radial-gradient(circle_at_50%_50%,rgba(245,158,11,0.3),transparent_50%)]" />
+            <div className="h-full w-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,153,51,0.1),transparent_50%)]" />
           </div>
 
           {/* Main Content */}
@@ -51,7 +51,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               }}
             >
               <motion.h1 
-                className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-amber-200 to-orange-400 bg-clip-text text-transparent"
+                className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-black via-orange to-black bg-clip-text text-transparent"
                 initial={{ y: 20 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
@@ -59,7 +59,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                 TRENDLOOP
               </motion.h1>
               <motion.p 
-                className="text-xl md:text-2xl text-amber-200 font-light tracking-wider mt-2"
+                className="text-xl md:text-2xl text-black/70 font-medium tracking-wider mt-2"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
@@ -78,7 +78,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               {[0, 1, 2].map((index) => (
                 <motion.div
                   key={index}
-                  className="w-3 h-3 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full"
+                  className="w-3 h-3 bg-gradient-to-r from-orange to-black rounded-full"
                   animate={{
                     scale: [1, 1.5, 1],
                     opacity: [0.5, 1, 0.5],
@@ -94,7 +94,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
 
             {/* Pulsing Ring Animation */}
             <motion.div
-              className="absolute w-32 h-32 border border-amber-400/30 rounded-full"
+              className="absolute w-32 h-32 border border-orange/30 rounded-full"
               animate={{
                 scale: [1, 2, 1],
                 opacity: [0.3, 0, 0.3],
@@ -106,7 +106,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               }}
             />
             <motion.div
-              className="absolute w-48 h-48 border border-orange-400/20 rounded-full"
+              className="absolute w-48 h-48 border border-orange/20 rounded-full"
               animate={{
                 scale: [1, 1.8, 1],
                 opacity: [0.2, 0, 0.2],
@@ -122,7 +122,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
 
           {/* Skip Button */}
           <motion.button
-            className="absolute bottom-8 right-8 text-amber-200/60 hover:text-amber-200 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-50 rounded-md px-3 py-2"
+            className="absolute bottom-8 right-8 text-black/60 hover:text-black transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-opacity-50 rounded-md px-3 py-2"
             onClick={() => {
               setIsVisible(false);
               setTimeout(onComplete, 800);
