@@ -83,8 +83,8 @@ const Pricing = () => {
     try {
       setLoading(priceId);
       
-      // Call your backend to create checkout session
-      const response = await fetch('http://localhost:3001/create-checkout-session', {
+      // Call your backend via proxy
+      const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
