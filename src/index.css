@@ -120,6 +120,13 @@ All colors MUST be HSL.
     font-weight: 400;
     letter-spacing: -0.01em;
     line-height: 1.6;
+    background-color: #ffffff !important; /* Force white background to prevent flash */
+  }
+
+  /* Ensure root element is also white */
+  #root {
+    background-color: #ffffff;
+    min-height: 100vh;
   }
 
   /* Font Weight Classes */
