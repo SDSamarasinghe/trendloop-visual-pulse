@@ -25,17 +25,22 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-white"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="h-full w-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,153,51,0.1),transparent_50%)]" />
-          </div>
+        <>
+          {/* Pure white overlay to prevent any color bleeding */}
+          <div 
+            className="fixed inset-0 z-40" 
+            style={{ backgroundColor: '#ffffff' }}
+          />
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center"
+            style={{ backgroundColor: '#ffffff' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          >
+            {/* Clean white background - no gradient patterns */}
+          {/* Clean white background - no gradient patterns */}
 
           {/* Main Content */}
           <div className="relative flex flex-col items-center space-y-8">
@@ -136,7 +141,8 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
           >
             Skip →
           </motion.button>
-        </motion.div>
+          </motion.div>
+        </>
       )}
     </AnimatePresence>
   );
